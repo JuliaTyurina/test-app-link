@@ -1,0 +1,102 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.benefits {
+    @include section;
+    @include verticalPadding;
+
+    
+
+    img {
+        max-width: 752px;
+    }
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__descr {
+        @include sectionText;
+        max-width: 572px;
+
+        @media (max-width: 700px) {
+            margin-bottom: 80px;            
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 88px;
+        padding-top: 64px;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+        }
+
+        @media (max-width: 700px) {
+            gap: 80px;
+            img {
+                object-fit: contain;
+                width: 343px;
+                height: 347px;
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+
+        @media (max-width: 1200px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 700px) {
+            @include horizontalPadding;
+            row-gap: 32px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 16px;
+
+        @media (max-width: 1200px) {
+            width: 50%;
+            justify-content: center;
+        }
+
+        @media (max-width: 700px) {
+            width: 100%;
+
+            svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            justify-content: start;
+        }
+    }
+
+    &__item-descr {
+        display: flex;
+        flex-direction: column;
+        max-width: 288px;
+        row-gap: 16px;
+    }
+
+    &__item-title {
+        @include cardTitle;
+    }
+
+    &__item-text {
+        @include cardText;
+    }
+}

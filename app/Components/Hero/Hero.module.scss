@@ -1,0 +1,120 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 113.6vh;
+    background-image: url(/images/hero.webp);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position: center 83%;
+
+    &__gradient {
+        width: 100%;
+        min-height: 550px;
+        background: linear-gradient(180.00deg, rgba(0, 0, 0, 0), rgb(14, 14, 14) 66.146%);
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 744px;
+        padding-top: 210px;
+
+        @media (max-width: 1200px) {
+            padding-top: 150px;
+        }
+
+        @media (max-width: 700px) {
+            max-width: 343px;
+            padding-top: 134px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 33px;
+        color: $title-color;
+        font-size: 80px;
+        font-weight: 600;
+        line-height: 100%;
+        letter-spacing: -2px;
+        text-align: center;
+
+        @media (max-width: 1200px) {
+            font-size: 56px;
+        }
+
+        @media (max-width: 700px) {
+            font-size: 48px;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__descr {
+        @include sectionText;
+        max-width: 612px;
+        margin-bottom: 64px;
+
+        @media (max-width: 1200px) {
+            font-size: 14px;
+        }
+
+        @media (max-width: 700px) {
+            margin-bottom: 48px;
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        @media (max-width: 700px) {
+            flex-direction: column;
+        }
+    }
+
+    &__buttons-trial,
+    &__buttons-info {
+        @include coloredBtn;
+        display: flex;
+        align-items: center;
+        padding: 20px 40px;
+        font-size: 18px;
+        line-height: 135%;
+
+        @media (max-width: 1200px) {
+            padding: 16px 32px;
+            font-size: 16px;
+
+        }
+    }
+
+    &__buttons-info {
+        @include standartBtn;
+        padding: 20px 40px;
+
+        @media (max-width: 1200px) {
+            padding: 16px 32px;
+        }
+    }
+
+}
+
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	/* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}

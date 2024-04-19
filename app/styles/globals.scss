@@ -1,0 +1,77 @@
+@import '_variables';
+@import '_mixins';
+
+@font-face {
+  font-family: 'Onest';
+  src: url(/fonts/Onest-Regular.woff2);
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url(/fonts/Onest-Medium.woff2);
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Onest';
+  src: url(/fonts/Onest-SemiBold.woff2);
+  font-weight: 600;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// html {
+//   scroll-behavior: smooth;
+// }
+
+body {
+  margin: 0 auto;
+  // max-width: 1920px;
+  min-width: 375px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Onest', serif;
+  background: $background-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol,
+li,
+p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+img {
+  width: 100%;
+}

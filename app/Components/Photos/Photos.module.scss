@@ -1,0 +1,22 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.photos {
+    @include section;
+    @include horizontalPadding;
+    @include verticalPadding;
+    
+    &__title {
+        @include sectionTitle;
+        margin-bottom: 44px;
+    }
+
+    &__descr {
+        @include sectionText;
+        max-width: 523px;
+    }
+}
+
+.show-more {
+    @include standartBtn;
+}

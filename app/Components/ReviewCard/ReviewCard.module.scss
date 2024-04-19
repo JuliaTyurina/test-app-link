@@ -1,0 +1,63 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.review__card {
+    max-width: 456px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+    padding: 40px;
+    border: 1px solid rgb(67, 73, 86);
+    border-radius: 8px;
+    background: $background-color;
+
+    @media (max-width: 1200px) {
+        max-width: 100%;
+    }
+
+    @media (max-width: 700px) {
+        max-width: 343px;
+        padding: 24px;
+    }
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+
+    &__avatar {
+        width: 56px;
+        height: 56px;
+
+        @media (max-width: 700px) {
+            width: 52px;
+            height: 52px;
+        }
+    }
+
+    &__name {
+        @include cardTitle;
+    }
+
+    &__occupation {
+        @include secondaryText;
+        letter-spacing: 0.1px;
+    }
+
+    &__comment {
+        @include cardText;
+    }
+
+    &__comment-text {
+        margin-bottom: 16px;
+    }
+
+    &__comment-btn {
+        @include cardText;
+        padding: 0;
+        background: transparent;
+        border: none;
+        color: $colored-btn;
+    }
+}

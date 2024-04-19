@@ -1,0 +1,43 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.partners {
+    @include section;
+    @include horizontalPadding;
+    @include verticalPadding;
+
+    &__title {
+        @include sectionTitle;
+
+        @media (max-width: 992px) {
+            margin-bottom: 34px;
+        }
+    }
+
+    &__descr {
+        @include sectionText;
+        max-width: 523px;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(7, max-content);
+        align-items: center;
+        column-gap: 64px;
+
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(4, max-content);
+            grid-template-rows: repeat(2, max-content);
+            column-gap: 30px;
+            row-gap: 26px;
+        }
+    }
+
+    &__ibm {
+        @media (max-width: 992px) {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+
+    }
+}

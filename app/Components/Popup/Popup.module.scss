@@ -1,0 +1,44 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  margin: auto 0;
+  border-radius: 8px;
+  background: transparent;
+  display: none;
+  z-index: 3;
+
+  img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__full-comment {
+    width: auto;
+    background: transparent;
+
+    @media (max-width: 1200px) {
+      height: max-content;
+    }
+  }
+}
+
+.popup_is-opened {
+  display: block;
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 0px;
+  right: -60px;
+
+
+}
+
+.close:hover rect {
+  fill: rgba(255, 255, 255, 0.1);
+}

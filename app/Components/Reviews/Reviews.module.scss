@@ -1,0 +1,65 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.reviews {
+    @include section;
+    @include horizontalPadding;
+    @include verticalPadding;
+
+    @media (max-width: 700px) {
+        padding-top: 90px;
+    }
+
+    &__title {
+        @include sectionTitle;
+        margin-bottom: 64px;
+        line-height: 50px;
+
+        @media (max-width: 700px) {
+            margin-bottom: 62px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        gap: 24px;
+        margin-bottom: 64px;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 700px) {
+            gap: 8px;
+        }
+    }
+
+    &__switcher {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+    }
+
+    &__prev,
+    &__next {
+        @include standartBtn;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+    }
+
+    &__count {
+        color: $title-color;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 0px;
+
+        @media (max-width: 700px) {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 27px;
+        }
+    }
+}

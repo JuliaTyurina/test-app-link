@@ -1,0 +1,90 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.login {
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 460px;
+        row-gap: 24px;
+        padding: 32px;
+        background: $background-color;
+        border-radius: 16px;
+    }
+
+    &__title {
+        @include cardTitle;
+    }
+
+    &__form-block {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+    }
+
+    &__form-checkbox {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+    }
+
+    &__label,
+    &__with,
+    &__first {
+        @include cardText;
+        color: $title-color;
+    }
+
+    &__input {
+        @include formText;
+        @include formBlock;
+        padding: 12px 50px 12px 16px;
+    }
+
+    &__form-btn {
+        @include coloredBtn;
+    }
+
+    &__with {
+        text-align: center
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 12px;
+    }
+
+    &__first {
+        text-align: center;
+    }
+
+    &__link {
+        color: $colored-btn;
+    }
+
+}
+
+.password {
+    position: relative;
+
+    &__closed, &__opened {
+        position: absolute;
+        top: 40px;
+        right: 15px;
+    }
+}
+
+.checkbox__label {
+    @include cardText;
+    color: $title-color;
+}
+
+.google, .apple {
+    @include standartBtn;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+}

@@ -1,0 +1,104 @@
+@import '/app/styles/mixins';
+@import '/app/styles/_variables';
+
+.product {
+    @include section;
+    @include horizontalPadding;
+    @include verticalPadding;
+
+    &__title {
+        @include sectionTitle;
+    }
+
+    &__descr {
+        @include sectionText;
+        max-width: 523px;
+    }
+
+    &__cards {
+        display: flex;
+        width: 100%;
+        gap: 24px;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 700px) {
+            gap: 16px;
+        }
+    }
+
+    &__card {
+        @include card;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        padding: 2.4vw 7.5vw;
+
+        @media (max-width: 1200px) {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        @media (max-width: 700px) {
+            padding: 32px 16px;
+        }
+    }
+
+    &__card-title {
+        @include cardTitle;
+        margin-bottom: 24px;
+
+        @media (max-width: 700px) {
+            margin-bottom: 13px;
+            font-size: 20px;
+        }
+    }
+
+    &__card-descr {
+        @include cardText;
+        max-width: 366px;
+        margin-bottom: 48px;
+        text-align: center;
+
+        @media (max-width: 700px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    .registration,
+    .trial {
+        @include coloredBtn;
+        margin-bottom: 48px;
+
+        @media (max-width: 1919px) {
+            margin-bottom: 2vw;
+        }
+
+        @media (max-width: 700px) {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__image1,
+    &__image2 {
+        object-fit: contain;
+    }
+
+    &__image1 {
+        @media (max-width: 700px) {
+            width: 311px;
+            height: 210px;
+        }
+    }
+
+    &__image2 {
+        @media (max-width: 700px) {
+            width: 311px;
+            height: 226px;
+        }
+    }
+
+}
